@@ -1,0 +1,38 @@
+<!-- 
+html {
+    background: url(https://clickitupanotch.com/wp-content/uploads/2017/05/shelbyzavala_thirdavenueimage_1200px_3.jpg) center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: snow;
+}
+
+div {
+    margin: auto;
+}
+
+h1 {
+    color: wheat;
+}
+
+img {
+    width: 400px;
+    height: 250px;
+}
+
+#spanID {
+    font-size: 18px;
+    margin: 50px;
+}
+
+#thirdDiv {
+    height: 600px;
+    width: 500px;
+    background: steelblue;
+    border: 2px solid snow;
+    padding: 50px;
+}
+-->
