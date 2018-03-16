@@ -104,9 +104,11 @@ function setUsersToPremium(users) {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
-  const updatedUsers = users;
-  users.isPremium = true;
-  return updatedUsers;
+  for (let i = 0; i < users.length; i++) {
+    users[i].isPremium = true;
+  }
+  return users;
+  
 }
 
 function sumUserPostLikes(user) {
@@ -115,12 +117,11 @@ function sumUserPostLikes(user) {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
-  let sum = 0;
-
+  let likesSum = 0;
   for (let i = 0; i < user.posts.length; i++) {
-    sum = sum + user.posts.likes[i];
+    likesSum = likesSum + user.posts[i].likes;
   }
-  return sum;
+  return likesSum;
 }
 
 function addCalculateDiscountPriceMethod(storeItem) {
@@ -132,7 +133,13 @@ function addCalculateDiscountPriceMethod(storeItem) {
   // price -> 20
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
+  storeItem.calculateDiscountPrice = function () {
+    this.price - (this.price * this.discountPercentage);
+  };
+
+  return storeItem;
 }
+
 
 // Do not modify code below this line.
 // --------------------------------
