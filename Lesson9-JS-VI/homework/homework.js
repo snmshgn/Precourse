@@ -26,9 +26,7 @@ function map(arr, cb) {
   // create a new array
   // iterate over each value in arr, pass it to cb, then place the value returned from cb into the new arr
   // the new array should be the same length as the array argument
-  const newArray = arr.map(function(item) {
-    return item * item;
-  });
+  const newArray = arr.map(cb);
   return newArray;
 }
 
