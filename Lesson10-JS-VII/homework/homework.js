@@ -21,7 +21,7 @@ function cacheFunction(cb) {
       return cache[n];
     } else {
       cache[n] = cb(n);
-      return cb(n);
+      return cache[n];
     }
   };
 }
