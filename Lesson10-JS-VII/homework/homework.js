@@ -17,10 +17,12 @@ function counter() {
 function cacheFunction(cb) {
   const cache = { };
   return function (n) {
-    if (cacheFunction(cb) in cache) {
-      return cache;
+    if (n in cache) {
+      return cache[n];
+    } else {
+      cache[n] = cb(n);
+      return cb(n);
     }
-    return cb(n);
   };
 }
   // use closure to create a cache for the cb function
